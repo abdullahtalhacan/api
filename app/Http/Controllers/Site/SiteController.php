@@ -104,7 +104,11 @@ class SiteController extends Controller
             } else if (isItEditable($date . " " . $time . ":00", $limit, $timeZone) === true) {
                 $fields = ["id", "name", "surname", "email", "verifyCode", "phone", "gender", "age", "date", "time", 'status'];
                 $responseFields = collect($appointment[0])->only($fields)->toArray();
-                $responseFields['status'] = $responseFields['status']['name'];
+                $responseFields['status'] = [
+                    "name" => $responseFields['status']['name'],
+                    "text" => $responseFields['status']['text']
+                ];
+                $responseFields['timezone'] = $timeZone;
                 return response()->json($responseFields);
             } else {
                 return response()->json([
@@ -260,5 +264,10 @@ class SiteController extends Controller
             "time" => $appointment->time,
             "verifyCode" => $appointment->verifyCode
         ]);
+    }
+
+    public function cancelAppointment(Request $request) {
+
+        return response()->json($request->all());
     }
 }

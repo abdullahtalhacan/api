@@ -33,4 +33,5 @@ Route::group(['prefix' => 'site'], function () {
     Route::get('getSettings', [SiteController::class, 'getSettings']);
     Route::get('manageAppointment', [SiteController::class, 'manageAppointment']);
     Route::post('storeAppointment', [SiteController::class, 'storeAppointment']);
+    Route::post('cancelAppointment', [SiteController::class, 'cancelAppointment']);
 });
