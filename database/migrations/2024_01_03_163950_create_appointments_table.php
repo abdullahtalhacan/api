@@ -27,7 +27,9 @@ return new class extends Migration {
             $table->foreign('feedback_id')->references('id')->on('feedback')->onDelete('set null');
             $table->string('verifyCode');
             $table->unsignedBigInteger('appointment_status_id')->default(1);
+            $table->unsignedBigInteger('payment_status_id')->default(1);
             $table->foreign('appointment_status_id')->references('id')->on('appointment_statuses');
+            $table->foreign('payment_status_id')->references('id')->on('payment_statuses');
             $table->timestamps();
         });
     }

@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Appointment;
 use App\Models\AppointmentStatus;
 use App\Models\Feedback;
+use App\Models\PaymentStatus;
 
 class AppointmentSeeder extends Seeder
 {
@@ -17,18 +18,25 @@ class AppointmentSeeder extends Seeder
     public function run(): void
     {
         $statuses = [
-            ['name' => 'pending_payment', 'text' => 'Ödeme Bekleniyor', 'desc' => 'Randevu sonuçlandırıldı ve ödeme bekleniyor.'],
+            ['name' => 'pending', 'text' => 'Yeni Randevu', 'desc' => 'Katılımcı yeni randevu girişi yaptı. Ödeme bekleniyor.'],
             ['name' => 'approved', 'text' => 'Onaylandı', 'desc' => 'Tüm koşullar yerine getirildi. Randevu saati bekleniyor.'],
             ['name' => 'rescheduled', 'text' => 'Yeniden Planlandı', 'desc' => 'Randevu saati veya tarihi değiştirildi.'],
             ['name' => 'completed', 'text' => 'Tamamlandı', 'desc' => 'Randevu başarıyla sonuçlandırıldı.'],
-            ['name' => 'cancelled', 'text' => 'İptal Edildi', 'desc' => 'Katılımcı tarafından iptal edilen randevu.'],
-            ['name' => 'no_payment', 'text' => 'Ödeme Yapılmadı', 'desc' => 'Katılımcı belirtilen süre içinde ödeme yapmadı.'],
+            ['name' => 'cancelled', 'text' => 'İptal Edildi', 'desc' => 'Katılımcı tarafından iptal edilen veya zamanında ücreti ödenmeyen randevu.'],
             ['name' => 'no_participation', 'text' => 'Katılım Yok', 'desc' => 'Randevu saatinde katılımcı gelmedi.'],
             ['name' => 'feedback_pending', 'text' => 'Yorum Bekleniyor', 'desc' => 'Katılımcının randevu sonrasında değerlendirme formunu doldurması beklenmektedir.'],
+        ];
+
+        $payment_status = [
+            ['name' => 'pending', 'text' => 'Ödeme Bekleniyor', 'desc' => 'Randevu sonuçlandırıldı ve ödeme bekleniyor.'],
+            ['name' => 'approved', 'text' => 'Ödeme Yapıldı', 'desc' => 'Katılımcı Ödemeyi yaptı'],
+            ['name' => 'no_payment', 'text' => 'Ödeme Yapılmadı', 'desc' => 'Katılımcı belirtilen süre içinde ödeme yapmadı.'],
             ['name' => 'awaiting_refund', 'text' => 'İade Bekleniyor', 'desc' => 'Katılımcı belirtilen koşullar altında randevusunu iptal etti.'],
         ];
 
-        //AppointmentStatus::insert($statuses);
+        AppointmentStatus::insert($statuses);
+        PaymentStatus::insert($payment_status);
+
         $numAppointments = 280;
         $faker = \Faker\Factory::create('tr_TR');
         $dataArray = [];

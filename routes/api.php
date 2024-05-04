@@ -32,6 +32,12 @@ Route::group(['prefix' => 'site'], function () {
     Route::get('appointmentList', [SiteController::class, 'appointmentList']);
     Route::get('getSettings', [SiteController::class, 'getSettings']);
     Route::get('manageAppointment', [SiteController::class, 'manageAppointment']);
+    Route::get('getTerms', [SiteController::class, 'getTerms']);
+    Route::get('getFeedbacks', [SiteController::class, 'getFeedbacks']);
+    Route::get('checkFeedback', [SiteController::class, 'checkFeedback']);
+    Route::post('storeFeedback', [SiteController::class, 'storeFeedback']);
     Route::post('storeAppointment', [SiteController::class, 'storeAppointment']);
     Route::post('cancelAppointment', [SiteController::class, 'cancelAppointment']);
+    Route::post('contact', [SiteController::class, 'contactForm']);
 });
+

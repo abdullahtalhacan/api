@@ -1,358 +1,1467 @@
 <!doctype html>
-<html lang="tr">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<html
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  lang="en"
+>
+  <head>
     <title></title>
-</head>
-<body style="width: 100%;
-  display: flex;
-  justify-content: center;
-  color: #1F2937;
-  background-color: #d8d8d9;">
-<div style="
-  padding-left: 2rem;
-padding-right: 2rem;
-padding-top: 1.25rem;
-padding-bottom: 1.25rem;
-max-width: 64rem;">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if mso
+      ]><xml
+        ><o:OfficeDocumentSettings
+          ><o:PixelsPerInch>96</o:PixelsPerInch
+          ><o:AllowPNG /></o:OfficeDocumentSettings></xml
+    ><![endif]-->
+    <!--[if !mso]><!-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--<![endif]-->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-    <div
-        style="
-        padding: 1rem;
-        border-radius: 0.75rem;
-        background-color: #ffffff;
-        box-shadow:
-          0 1px 3px 0 rgba(0, 0, 0, 0.1),
-          0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: inherit !important;
+      }
+
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      p {
+        line-height: inherit;
+      }
+
+      .desktop_hide,
+      .desktop_hide table {
+        mso-hide: all;
+        display: none;
+        max-height: 0px;
+        overflow: hidden;
+      }
+
+      .image_block img + div {
+        display: none;
+      }
+
+      @media (max-width: 700px) {
+        .desktop_hide table.icons-inner,
+        .social_block.desktop_hide .social-table {
+          display: inline-block !important;
+        }
+
+        .icons-inner {
+          text-align: center;
+        }
+
+        .icons-inner td {
+          margin: 0 auto;
+        }
+
+        .mobile_hide {
+          display: none;
+        }
+
+        .row-content {
+          width: 100% !important;
+        }
+
+        .stack .column {
+          width: 100%;
+          display: block;
+        }
+
+        .mobile_hide {
+          min-height: 0;
+          max-height: 0;
+          max-width: 0;
+          overflow: hidden;
+          font-size: 0px;
+        }
+
+        .desktop_hide,
+        .desktop_hide table {
+          display: table !important;
+          max-height: none !important;
+        }
+
+        .row-2 .column-1 .block-2.heading_block h1 {
+          font-size: 39px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    "
+  >
+    <table
+      class="nl-container"
+      width="100%"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+      style="
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
       "
     >
-        <div
-            style="
-          display: flex;
-          margin-top: 1rem;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        "
-        >
-            <div
-                style="
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-          "
+      <tbody>
+        <tr>
+          <td>
+            <table
+              class="row row-1"
+              align="center"
+              width="100%"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="mso-table-lspace: 0pt; mso-table-rspace: 0pt"
             >
-                <div style="position: relative; padding-bottom: 1rem">
-                    <div
-                        style="
-                position: absolute;
-                top: -3px;
-                left: 0.25rem;
-                border-radius: 0.375rem;
-                width: 2.5rem;
-                height: 2.5rem;
-                background-color:  rgb(22 163 74 / 1);
-                transform: rotate(12deg);
-              "
-                    ></div>
-                    <div
-                        style="
-                display: flex;
-                z-index: 50;
-                justify-content: center;
-                align-items: center;
-                border-radius: 0.375rem;
-                width: 2.5rem;
-                height: 2.5rem;
-                background-color: rgb(255 255 255 / 0.3);
-                backdrop-filter: blur(4px);
-              "
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      class="row-content stack"
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        border-radius: 0;
+                        width: 680px;
+                        margin: 0 auto;
+                      "
+                      width="680"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                            data-slot="icon"
-                            style="width: 1.5rem; height: 1.5rem; color: #ffffff"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
-                <h2
-                    style="
-              font-size: 1.25rem;
-              line-height: 1.75rem;
-              font-weight: 700;
-              color: #1f2937;
-            "
-                >
-                    Teşekkürler! Randevunuz Kayıt Edildi.
-                </h2>
-                <p style="max-width: 56rem;font-size: 0.875rem; line-height: 1.25rem; color: #4b5563">
-                    Merhaba {{ $name }}. Lütfen aşağıdaki bilgileri kontrol ediniz. Eğer bilgilerde bir yanlışlık
-                    olduğunu düşünüyorsanız bizimle iletişime geçebilir yada <strong><a
-                            href="{{ $site_url }}/appointment/manage"
-                            style="text-decoration: underline;color: #1F2937;">Randevu
-                            İşlemleri</a></strong> sayfasından bilgilerinizi düzenleyebilirsiniz.
-                </p>
-            </div>
-            <div style="display: flex">
-                <div
-                    style="
-              padding-top: 0.25rem;
-              padding-bottom: 0.25rem;
-              padding-left: 0.75rem;
-              padding-right: 0.75rem;
-              border-radius: 0.375rem;
-              border: solid 1px rgb(9 9 11 / 0.2);
-            "
-                >
-                    <div
-                        style="
-                display: grid;
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-                border-bottom: solid 1px rgb(9 9 11 / 0.2);
-                margin-left: 0.875rem;
-                grid-template-columns: repeat(5, minmax(0, 1fr));
-                align-items: center;
-              "
-                    >
-                        <div
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            width="100%"
                             style="
-                  display: flex;
-                  margin-right: 0.75rem;
-                  grid-column: span 2 / span 2;
-                  align-items: center;
-                "
-                        >
-                            <div
-                                style="
-                    padding: 0.375rem;
-                    margin-right: 0.5rem;
-                    border-radius: 0.375rem;
-                    border-width: 1px;
-                  "
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                          >
+                            <table
+                              class="image_block block-1"
+                              width="100%"
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
                             >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                    data-slot="icon"
-                                    style="width: 1.25rem; height: 1.25rem"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <span style="font-weight: 600">Ücret</span>
-                        </div>
-                        <span style="grid-column: span 3 / span 3">{{ $price }}</span>
-                    </div>
-                    <div
-                        style="
-                display: grid;
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-                border-bottom: solid 1px rgb(9 9 11 / 0.2);
-                margin-left: 0.875rem;
-                grid-template-columns: repeat(5, minmax(0, 1fr));
-                align-items: center;
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    class="alignment"
+                                    align="center"
+                                    style="line-height: 10px"
+                                  >
+                                    <div style="max-width: 300px">
+                                      <img
+                                        src="https://www.ronesanspsikolojimerkezi.com/home/mail-logo.png"
+                                        style="
+                                          display: block;
+                                          height: auto;
+                                          border: 0;
+                                          width: 100%;
+                                        "
+                                        width="146"
+                                        height="auto"
+                                      />
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              class="row row-2"
+              align="center"
+              width="100%"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background-color: #e6fff2;
               "
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      class="row-content stack"
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        color: #000000;
+                        width: 680px;
+                        margin: 0 auto;
+                      "
+                      width="680"
                     >
-                        <div
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            width="100%"
                             style="
-                  display: flex;
-                  margin-right: 0.75rem;
-                  grid-column: span 2 / span 2;
-                  align-items: center;
-                "
-                        >
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                          >
                             <div
-                                style="
-                    padding: 0.375rem;
-                    margin-right: 0.5rem;
-                    border-radius: 0.375rem;
-                    border-width: 1px;
-                  "
+                              class="spacer_block block-1"
+                              style="
+                                height: 40px;
+                                line-height: 40px;
+                                font-size: 1px;
+                              "
                             >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                    data-slot="icon"
-                                    style="width: 1.25rem; height: 1.25rem"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                                    ></path>
-                                </svg>
+                              &#8202;
                             </div>
-                            <span style="font-weight: 600">Saat</span>
-                        </div>
-                        <span style="grid-column: span 3 / span 3">{{ $time }}</span>
-                    </div>
-                    <div
-                        style="
-                display: grid;
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-                border-bottom: solid 1px rgb(9 9 11 / 0.2);
-                margin-left: 0.875rem;
-                grid-template-columns: repeat(5, minmax(0, 1fr));
-                align-items: center;
+                            <table
+                              class="heading_block block-2"
+                              width="100%"
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <h1
+                                    style="
+                                      margin: 0;
+                                      color: #12141d;
+                                      direction: ltr;
+                                      font-family:
+                                        Montserrat,
+                                        Trebuchet MS,
+                                        Lucida Grande,
+                                        Lucida Sans Unicode,
+                                        Lucida Sans,
+                                        Tahoma,
+                                        sans-serif;
+                                      font-size: 44px;
+                                      font-weight: 700;
+                                      letter-spacing: normal;
+                                      line-height: 150%;
+                                      text-align: center;
+                                      margin-top: 0;
+                                      margin-bottom: 0;
+                                      mso-line-height-alt: 66px;
+                                    "
+                                  >
+                                    Teşekkürler! Randevunuz Kayıt Edildi.
+                                  </h1>
+                                </td>
+                              </tr>
+                            </table>
+                            <div
+                              class="spacer_block block-3"
+                              style="
+                                height: 6px;
+                                line-height: 6px;
+                                font-size: 1px;
+                              "
+                            >
+                              &#8202;
+                            </div>
+                            <table
+                              class="paragraph_block block-4"
+                              width="100%"
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    style="
+                                      color: #393d47;
+                                      direction: ltr;
+                                      font-family:
+                                        Montserrat,
+                                        Trebuchet MS,
+                                        Lucida Grande,
+                                        Lucida Sans Unicode,
+                                        Lucida Sans,
+                                        Tahoma,
+                                        sans-serif;
+                                      font-size: 15px;
+                                      font-weight: 400;
+                                      letter-spacing: 0px;
+                                      line-height: 150%;
+                                      text-align: center;
+                                      mso-line-height-alt: 22.5px;
+                                    "
+                                  >
+                                    <p style="margin: 0">
+                                      Merhaba {{ $name }}. Lütfen aşağıdaki
+                                      bilgileri kontrol ediniz. Eğer bilgilerde
+                                      bir yanlışlık olduğunu düşünüyorsanız
+                                      bizimle iletişime geçebilir
+                                      yada&nbsp;<strong
+                                        ><a
+                                          href="https://cdpn.io/cpe/boomboom/%7B%7B%20$site_url%20%7D%7D/appointment/manage"
+                                          style="
+                                            text-decoration: underline;
+                                            color: #8a3b8f;
+                                          "
+                                          >Randevu İşlemleri</a
+                                        ></strong
+                                      >&nbsp;sayfasından bilgilerinizi
+                                      düzenleyebilirsiniz.
+                                    </p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <div
+                              class="spacer_block block-5"
+                              style="
+                                height: 20px;
+                                line-height: 20px;
+                                font-size: 1px;
+                              "
+                            >
+                              &#8202;
+                            </div>
+                            <table
+                              class="table_block block-6"
+                              width="100%"
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <table
+                                    style="
+                                      mso-table-lspace: 0pt;
+                                      mso-table-rspace: 0pt;
+                                      border-collapse: collapse;
+                                      width: 100%;
+                                      table-layout: fixed;
+                                      direction: ltr;
+                                      background-color: transparent;
+                                      font-family:
+                                        Montserrat,
+                                        Trebuchet MS,
+                                        Lucida Grande,
+                                        Lucida Sans Unicode,
+                                        Lucida Sans,
+                                        Tahoma,
+                                        sans-serif;
+                                      font-weight: 400;
+                                      color: #000000;
+                                      text-align: left;
+                                      letter-spacing: 0px;
+                                    "
+                                    width="100%"
+                                  >
+                                    <tbody
+                                      style="
+                                        vertical-align: top;
+                                        font-size: 14px;
+                                        line-height: 120%;
+                                      "
+                                    >
+                                      <tr>
+                                        <td
+                                          width="50%"
+                                          style="
+                                            padding: 10px;
+                                            word-break: break-word;
+                                            border-top: 1px solid #dddddd;
+                                            border-right: 1px solid #dddddd;
+                                            border-bottom: 1px solid #dddddd;
+                                            border-left: 1px solid #dddddd;
+                                          "
+                                        >
+                                          Ücret
+                                        </td>
+                                        <td
+                                          width="50%"
+                                          style="
+                                            padding: 10px;
+                                            word-break: break-word;
+                                            border-top: 1px solid #dddddd;
+                                            border-right: 1px solid #dddddd;
+                                            border-bottom: 1px solid #dddddd;
+                                            border-left: 1px solid #dddddd;
+                                          "
+                                        >
+                                          {{ $price }}
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td
+                                          width="50%"
+                                          style="
+                                            padding: 10px;
+                                            word-break: break-word;
+                                            border-top: 1px solid #dddddd;
+                                            border-right: 1px solid #dddddd;
+                                            border-bottom: 1px solid #dddddd;
+                                            border-left: 1px solid #dddddd;
+                                          "
+                                        >
+                                          Saat
+                                        </td>
+                                        <td
+                                          width="50%"
+                                          style="
+                                            padding: 10px;
+                                            word-break: break-word;
+                                            border-top: 1px solid #dddddd;
+                                            border-right: 1px solid #dddddd;
+                                            border-bottom: 1px solid #dddddd;
+                                            border-left: 1px solid #dddddd;
+                                          "
+                                        >
+                                          {{ $time }}
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td
+                                          width="50%"
+                                          style="
+                                            padding: 10px;
+                                            word-break: break-word;
+                                            border-top: 1px solid #dddddd;
+                                            border-right: 1px solid #dddddd;
+                                            border-bottom: 1px solid #dddddd;
+                                            border-left: 1px solid #dddddd;
+                                          "
+                                        >
+                                          Tarih
+                                        </td>
+                                        <td
+                                          width="50%"
+                                          style="
+                                            padding: 10px;
+                                            word-break: break-word;
+                                            border-top: 1px solid #dddddd;
+                                            border-right: 1px solid #dddddd;
+                                            border-bottom: 1px solid #dddddd;
+                                            border-left: 1px solid #dddddd;
+                                          "
+                                        >
+                                          {{ $date }}
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td
+                                          width="50%"
+                                          style="
+                                            padding: 10px;
+                                            word-break: break-word;
+                                            border-top: 1px solid #dddddd;
+                                            border-right: 1px solid #dddddd;
+                                            border-bottom: 1px solid #dddddd;
+                                            border-left: 1px solid #dddddd;
+                                          "
+                                        >
+                                          Randevu Kodu
+                                        </td>
+                                        <td
+                                          width="50%"
+                                          style="
+                                            padding: 10px;
+                                            word-break: break-word;
+                                            border-top: 1px solid #dddddd;
+                                            border-right: 1px solid #dddddd;
+                                            border-bottom: 1px solid #dddddd;
+                                            border-left: 1px solid #dddddd;
+                                          "
+                                        >
+                                          {{ $verifyCode }}
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <div
+                              class="spacer_block block-7"
+                              style="
+                                height: 20px;
+                                line-height: 20px;
+                                font-size: 1px;
+                              "
+                            >
+                              &#8202;
+                            </div>
+                            <table
+                              class="paragraph_block block-8"
+                              width="100%"
+                              border="0"
+                              cellpadding="10"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                            >
+                              <tr>
+                                <td class="pad">
+                                  <div
+                                    style="
+                                      color: #101112;
+                                      direction: ltr;
+                                      font-family:
+                                        Montserrat,
+                                        Trebuchet MS,
+                                        Lucida Grande,
+                                        Lucida Sans Unicode,
+                                        Lucida Sans,
+                                        Tahoma,
+                                        sans-serif;
+                                      font-size: 16px;
+                                      font-weight: 400;
+                                      letter-spacing: 0px;
+                                      line-height: 120%;
+                                      text-align: center;
+                                      mso-line-height-alt: 19.2px;
+                                    "
+                                  >
+                                    <p style="margin: 0">
+                                      Bir sorunuz mu var? Bize&nbsp;<a
+                                        href="mailto:{{ $contact_email }}"
+                                        style="
+                                          text-decoration: underline;
+                                          color: #7747ff;
+                                        "
+                                        >{{ $contact_email }}</a
+                                      >&nbsp;adresinden e-posta
+                                      gönderebilirisiniz.
+                                    </p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <div
+                              class="spacer_block block-9"
+                              style="
+                                height: 5px;
+                                line-height: 5px;
+                                font-size: 1px;
+                              "
+                            >
+                              &#8202;
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              class="row row-3"
+              align="center"
+              width="100%"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="mso-table-lspace: 0pt; mso-table-rspace: 0pt"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      class="row-content stack"
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        border-radius: 0;
+                        color: #000000;
+                        width: 680px;
+                        margin: 0 auto;
+                      "
+                      width="680"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            width="100%"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                          >
+                            <div
+                              class="spacer_block block-1"
+                              style="
+                                height: 60px;
+                                line-height: 60px;
+                                font-size: 1px;
+                              "
+                            >
+                              &#8202;
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              class="row row-4"
+              align="center"
+              width="100%"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="mso-table-lspace: 0pt; mso-table-rspace: 0pt"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      class="row-content stack"
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        color: #000000;
+                        width: 680px;
+                        margin: 0 auto;
+                      "
+                      width="680"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            width="33.333333333333336%"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                          ></td>
+                          <td
+                            class="column column-2"
+                            width="33.333333333333336%"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                          >
+                            <table
+                              class="heading_block block-1"
+                              width="100%"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-left: 20px;
+                                    text-align: center;
+                                    width: 100%;
+                                  "
+                                >
+                                  <h1
+                                    style="
+                                      margin: 0;
+                                      direction: ltr;
+                                      font-family:
+                                        Montserrat,
+                                        Trebuchet MS,
+                                        Lucida Grande,
+                                        Lucida Sans Unicode,
+                                        Lucida Sans,
+                                        Tahoma,
+                                        sans-serif;
+                                      font-size: 18px;
+                                      font-weight: normal;
+                                      line-height: 200%;
+                                      text-align: left;
+                                      margin-top: 0;
+                                      margin-bottom: 0;
+                                      mso-line-height-alt: 36px;
+                                    "
+                                  >
+                                    SAYFALAR
+                                  </h1>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              class="text_block block-2"
+                              width="100%"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 10px;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    padding-top: 10px;
+                                  "
+                                >
+                                  <div style="font-family: sans-serif">
+                                    <div
+                                      class
+                                      style="
+                                        font-size: 12px;
+                                        font-family:
+                                          Montserrat,
+                                          Trebuchet MS,
+                                          Lucida Grande,
+                                          Lucida Sans Unicode,
+                                          Lucida Sans,
+                                          Tahoma,
+                                          sans-serif;
+                                        mso-line-height-alt: 14.399999999999999px;
+                                        line-height: 1.2;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          mso-line-height-alt: 16.8px;
+                                        "
+                                      >
+                                        Anasayfa
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              class="text_block block-3"
+                              width="100%"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 10px;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    padding-top: 10px;
+                                  "
+                                >
+                                  <div style="font-family: sans-serif">
+                                    <div
+                                      class
+                                      style="
+                                        font-size: 12px;
+                                        font-family:
+                                          Montserrat,
+                                          Trebuchet MS,
+                                          Lucida Grande,
+                                          Lucida Sans Unicode,
+                                          Lucida Sans,
+                                          Tahoma,
+                                          sans-serif;
+                                        mso-line-height-alt: 14.399999999999999px;
+                                        line-height: 1.2;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          mso-line-height-alt: 16.8px;
+                                        "
+                                      >
+                                        Hakkınımda
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              class="text_block block-4"
+                              width="100%"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 10px;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    padding-top: 10px;
+                                  "
+                                >
+                                  <div style="font-family: sans-serif">
+                                    <div
+                                      class
+                                      style="
+                                        font-size: 12px;
+                                        font-family:
+                                          Montserrat,
+                                          Trebuchet MS,
+                                          Lucida Grande,
+                                          Lucida Sans Unicode,
+                                          Lucida Sans,
+                                          Tahoma,
+                                          sans-serif;
+                                        mso-line-height-alt: 14.399999999999999px;
+                                        line-height: 1.2;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          mso-line-height-alt: 16.8px;
+                                        "
+                                      >
+                                        İletişim
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              class="text_block block-5"
+                              width="100%"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 10px;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    padding-top: 10px;
+                                  "
+                                >
+                                  <div style="font-family: sans-serif">
+                                    <div
+                                      class
+                                      style="
+                                        font-size: 12px;
+                                        font-family:
+                                          Montserrat,
+                                          Trebuchet MS,
+                                          Lucida Grande,
+                                          Lucida Sans Unicode,
+                                          Lucida Sans,
+                                          Tahoma,
+                                          sans-serif;
+                                        mso-line-height-alt: 14.399999999999999px;
+                                        line-height: 1.2;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          mso-line-height-alt: 16.8px;
+                                        "
+                                      >
+                                        Randevu
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td
+                            class="column column-3"
+                            width="33.333333333333336%"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                          >
+                            <table
+                              class="heading_block block-1"
+                              width="100%"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-left: 20px;
+                                    text-align: center;
+                                    width: 100%;
+                                  "
+                                >
+                                  <h1
+                                    style="
+                                      margin: 0;
+                                      direction: ltr;
+                                      font-family:
+                                        Montserrat,
+                                        Trebuchet MS,
+                                        Lucida Grande,
+                                        Lucida Sans Unicode,
+                                        Lucida Sans,
+                                        Tahoma,
+                                        sans-serif;
+                                      font-size: 18px;
+                                      font-weight: normal;
+                                      line-height: 200%;
+                                      text-align: left;
+                                      margin-top: 0;
+                                      margin-bottom: 0;
+                                      mso-line-height-alt: 36px;
+                                    "
+                                  >
+                                    <strong>İletişim</strong>
+                                  </h1>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              class="text_block block-2"
+                              width="100%"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                word-break: break-word;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 10px;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    padding-top: 10px;
+                                  "
+                                >
+                                  <div style="font-family: sans-serif">
+                                    <div
+                                      class
+                                      style="
+                                        font-size: 12px;
+                                        font-family:
+                                          Montserrat,
+                                          Trebuchet MS,
+                                          Lucida Grande,
+                                          Lucida Sans Unicode,
+                                          Lucida Sans,
+                                          Tahoma,
+                                          sans-serif;
+                                        mso-line-height-alt: 14.399999999999999px;
+                                        line-height: 1.2;
+                                      "
+                                    >
+                                      <p
+                                        style="
+                                          margin: 0;
+                                          font-size: 14px;
+                                          mso-line-height-alt: 16.8px;
+                                        "
+                                      >
+                                        {{ $contact_email }}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                            <table
+                              class="social_block block-3"
+                              width="100%"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    padding-bottom: 10px;
+                                    padding-left: 20px;
+                                    padding-right: 10px;
+                                    padding-top: 10px;
+                                    text-align: left;
+                                  "
+                                >
+                                  <div class="alignment" align="left">
+                                    <table
+                                      class="social-table"
+                                      width="144px"
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                      style="
+                                        mso-table-lspace: 0pt;
+                                        mso-table-rspace: 0pt;
+                                        display: inline-block;
+                                      "
+                                    >
+                                      <tr>
+                                        <td style="padding: 0 4px 0 0">
+                                          <a
+                                            href="https://www.example.com/"
+                                            target="_blank"
+                                            ><img
+                                              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-white/facebook@2x.png"
+                                              width="32"
+                                              height="auto"
+                                              alt="Facebook"
+                                              title="facebook"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                          /></a>
+                                        </td>
+                                        <td style="padding: 0 4px 0 0">
+                                          <a
+                                            href="https://www.example.com/"
+                                            target="_blank"
+                                            ><img
+                                              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-white/twitter@2x.png"
+                                              width="32"
+                                              height="auto"
+                                              alt="Twitter"
+                                              title="twitter"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                          /></a>
+                                        </td>
+                                        <td style="padding: 0 4px 0 0">
+                                          <a
+                                            href="https://www.example.com/"
+                                            target="_blank"
+                                            ><img
+                                              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-white/linkedin@2x.png"
+                                              width="32"
+                                              height="auto"
+                                              alt="Linkedin"
+                                              title="linkedin"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                          /></a>
+                                        </td>
+                                        <td style="padding: 0 4px 0 0">
+                                          <a
+                                            href="https://www.example.com/"
+                                            target="_blank"
+                                            ><img
+                                              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-white/instagram@2x.png"
+                                              width="32"
+                                              height="auto"
+                                              alt="Instagram"
+                                              title="instagram"
+                                              style="
+                                                display: block;
+                                                height: auto;
+                                                border: 0;
+                                              "
+                                          /></a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              class="row row-5"
+              align="center"
+              width="100%"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="mso-table-lspace: 0pt; mso-table-rspace: 0pt"
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      class="row-content stack"
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        border-radius: 0;
+                        color: #000000;
+                        width: 680px;
+                        margin: 0 auto;
+                      "
+                      width="680"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            width="100%"
+                            style="
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                          >
+                            <div
+                              class="spacer_block block-1"
+                              style="
+                                height: 60px;
+                                line-height: 60px;
+                                font-size: 1px;
+                              "
+                            >
+                              &#8202;
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              class="row row-6"
+              align="center"
+              width="100%"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background-color: #ffffff;
               "
+            >
+              <tbody>
+                <tr>
+                  <td>
+                    <table
+                      class="row-content stack"
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        color: #000000;
+                        background-color: #ffffff;
+                        width: 680px;
+                        margin: 0 auto;
+                      "
+                      width="680"
                     >
-                        <div
+                      <tbody>
+                        <tr>
+                          <td
+                            class="column column-1"
+                            width="100%"
                             style="
-                  display: flex;
-                  margin-right: 0.75rem;
-                  grid-column: span 2 / span 2;
-                  align-items: center;
-                "
-                        >
-                            <div
-                                style="
-                    padding: 0.375rem;
-                    margin-right: 0.5rem;
-                    border-radius: 0.375rem;
-                    border-width: 1px;
-                  "
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              font-weight: 400;
+                              text-align: left;
+                              padding-bottom: 5px;
+                              padding-top: 5px;
+                              vertical-align: top;
+                              border-top: 0px;
+                              border-right: 0px;
+                              border-bottom: 0px;
+                              border-left: 0px;
+                            "
+                          >
+                            <table
+                              class="icons_block block-1"
+                              width="100%"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                text-align: center;
+                              "
                             >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                    data-slot="icon"
-                                    style="width: 1.25rem; height: 1.25rem"
+                              <tr>
+                                <td
+                                  class="pad"
+                                  style="
+                                    vertical-align: middle;
+                                    color: #1e0e4b;
+                                    font-family: &quot;Inter&quot;, sans-serif;
+                                    font-size: 15px;
+                                    padding-bottom: 5px;
+                                    padding-top: 5px;
+                                    text-align: center;
+                                  "
                                 >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <span style="font-weight: 600">Tarih</span>
-                        </div>
-                        <span style="grid-column: span 3 / span 3">{{ $date }}</span>
-                    </div>
-                    <div
-                        style="
-                display: grid;
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-                margin-left: 0.875rem;
-                grid-template-columns: repeat(5, minmax(0, 1fr));
-                align-items: center;
-              "
-                    >
-                        <div
-                            style="
-                  display: flex;
-                  margin-right: 0.75rem;
-                  grid-column: span 2 / span 2;
-                  align-items: center;
-                "
-                        >
-                            <div
-                                style="
-                    padding: 0.375rem;
-                    margin-right: 0.5rem;
-                    border-radius: 0.375rem;
-                    border-width: 1px;
-                  "
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                    data-slot="icon"
-                                    style="width: 1.25rem; height: 1.25rem"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <span
-                                style="display: flex; align-items: center; font-weight: 600"
-                            >
-                  <span style="margin-right: 0.25rem">Randevu Kodu</span>
+                                  <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    role="presentation"
+                                    style="
+                                      mso-table-lspace: 0pt;
+                                      mso-table-rspace: 0pt;
+                                    "
+                                  >
+                                    <tr>
+                                      <td
+                                        class="alignment"
+                                        style="
+                                          vertical-align: middle;
+                                          text-align: center;
+                                        "
+                                      >
+                                        <!--[if vml]><table align="center" cellpadding="0" cellspacing="0" role="presentation" style="display:inline-block;padding-left:0px;padding-right:0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;"><![endif]-->
+                                        <!--[if !vml]><!-->
 
-                </span>
-                        </div>
-                        <span style="grid-column: span 3 / span 3">{{ $verifyCode }}</span>
-                    </div>
-                </div>
-            </div>
-            <div style="max-width: 48rem; margin-top: 2rem;">
-                <div
-                    style="
-              padding: 0.5rem;
-              border-radius: 0.375rem;
-              background-color: #ecfdf5;
-              transition-property: all;
-              transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-              transition-duration: 300ms;
-              opacity: 1;
-            "
-                >
-                    <div style="display: flex">
-
-                        <div style="margin-left: 0.75rem; flex-grow: 1">
-                            <div
-                                style="
-                    font-size: 0.875rem;
-                    line-height: 1.25rem;
-                    color: #047857;
-                  "
-                            >
-                                <p>
-                                    Bir sorunuz mu var? Bize
-                                    <span style="font-weight: 600; color: #047857">
-                        <a href="mailto:{{ $contact_email }}"
-                           style="text-decoration: underline;color: #047857">{{ $contact_email }}</a>
-                    </span>
-                                    adresinden e-posta gönderebilirisiniz.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-</body>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End -->
+  </body>
 </html>

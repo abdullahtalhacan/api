@@ -28,7 +28,9 @@ class SettingSeeder extends Seeder
                 "name" => "timezone",
                 "title" => "Zaman Dilimi",
                 "desc" => "Randevuların doğru planlanması ve görüntülenmesi için tercih ettiğiniz saat dilimini ayarlayın.",
-                "value" => json_encode("Europe/Istanbul"),
+                "value" => json_encode([
+                    "name" => "Europe/Istanbul","text" => "Avrupa/İstanbul"
+                ]),
                 "options" => json_encode([
                     ["value" => "Europe/Istanbul", "option" => "Avrupa/İstanbul"],
                     ["value" => "Asia/Tbilisi", "option" => "Asya/Tiflis"],
@@ -58,19 +60,10 @@ class SettingSeeder extends Seeder
                 "category" => "Randevu",
             ],
             [
-                "name" => "cancellation_duration",
-                "title" => "Randevu İptal Süresi (Geri iade için geçerlidir)",
-                "desc" => "Randevu saatine kalan süre belirtilen süreden fazla ise kişi randevuyu iptal edebilir. (Bu seçenek sadece randevu ücretini ödemiş kişiler için geçerlidir.)",
-                "value" => json_encode("36"),
-                "options" => json_encode("saat"),
-                "element" => "input:text",
-                "category" => "Randevu",
-            ],
-            [
-                "name" => "edit_duration",
+                "name" => "edit_limit",
                 "title" => "Randevu Düzenleme Süresi",
-                "desc" => "Randevu saatine kalan süre belirtilen süreden fazla ise katılımcı düzenleme veya iptal işlemlerini yapabilir.",
-                "value" => json_encode("36"),
+                "desc" => "Randevu saatine kalan süre belirtilen süreden fazla ise katılımcı düzenleme, iptal işlemleri yapabilir yada eğer ödeme yapmışsa para iadesi alabilir.",
+                "value" => json_encode("48"),
                 "options" => json_encode("saat"),
                 "element" => "input:text",
                 "category" => "Randevu",
@@ -143,77 +136,22 @@ class SettingSeeder extends Seeder
                 "category" => "Randevu",
             ],
             [
-                "name" => "terms",
-                "title" => "Randevu Şartları",
-                "desc" => "Belirtilen şartlara göre randevu kaydı yapılacak.",
-                "value" => json_encode([
-                    "Seans süresi 45 Dakikadır.",
-                    "Seans ücreti 300 TL'dir.",
-                    "Randevunuz seans ücreti ödendikten sonra aktif hale gelecektir.",
-                    "Randevunuzu seans saatinden 12 saat öncesine kadar düzenleyebilir veya iptal edeblirsiniz.",
-                    "Seans ücretini IBAN adresimize gönderebilirsiniz. Gönderme işlemi sırasında mutlaka açıklama kısmına tam adınızı yazınız."
-                ]),
+                "name" => "bank_name",
+                "title" => "Banka İsmi",
+                "desc" => "",
+                "value" => json_encode("İş Bank"),
                 "options" => json_encode([]),
-                "element" => "list",
-                "category" => "Randevu",
+                "element" => "input:text",
+                "category" => "Ödeme",
             ],
             [
-                "name" => "agreement",
-                "title" => "Randevu Sözleşmesi",
-                "desc" => "Belirtilen şartlara göre randevu kaydı yapılacak.",
-                "value" => json_encode([<<<END
-<p class="MsoNormal" style="text-align:justify;text-indent:.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;" lang="TR" dir="ltr">Ben ____________________________ , kendime zarar verme düşüncelerim olduğunda intihar etmeyeceğime ve aşağıdaki planı uygulayacağıma söz veriyorum. Bu kriz planını, terapistim Psikolog ____________________________________ ile beraber hazırladım. (________________________________________________ I promise not to commit suicide when I have thoughts of harming myself and to follow the plan below. I prepared this crisis plan together with my therapist, Psychologist _________________________.)</span></span>
-</p>
-<p class="MsoListParagraphCxSpFirst" style="margin-left:40px;mso-list:l0 level1 lfo1;text-align:justify;text-indent:-.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">1.</span><span style="font:7.0pt 'Times New Roman';line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="line-height:115%;" lang="TR" dir="ltr">Kendime zarar verme düşüncelerim olduğunda aşağıda belirtilen kişileri telefonla aramayı kabul ediyorum. (I agree to call the following people by phone when I have thoughts of harming myself.)</span></span>
-</p>
-<p class="MsoListParagraphCxSpMiddle" style="margin-left:.75in;mso-add-space:auto;mso-list:l2 level1 lfo2;text-align:justify;text-indent:-.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">a.</span><span style="font:7.0pt 'Times New Roman';line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="line-height:115%;" lang="TR" dir="ltr">Birinci dereceden yakının Adı Soyadı (Name and Surname of first degree relative):</span></span>
-</p>
-<p class="MsoListParagraphCxSpMiddle" style="margin-left:.75in;mso-add-space:auto;mso-list:l2 level1 lfo2;text-align:justify;text-indent:-.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">b.</span><span style="font:7.0pt 'Times New Roman';line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="line-height:115%;" lang="TR" dir="ltr">Birinci dereceden yakının Adı Soyadı (Name and Surname of first degree relative):</span></span>
-</p>
-<p class="MsoListParagraphCxSpMiddle" style="margin-left:.75in;mso-add-space:auto;mso-list:l2 level1 lfo2;text-align:justify;text-indent:-.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">c.</span><span style="font:7.0pt 'Times New Roman';line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="line-height:115%;" lang="TR" dir="ltr">Bir akraba ya da arkadaşının Adı Soyadı (Name and Surname of a relative or friend):</span></span>
-</p>
-<p class="MsoListParagraphCxSpMiddle" style="margin-left:40px;mso-list:l0 level1 lfo1;text-align:justify;text-indent:-.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">2.</span><span style="font:7.0pt 'Times New Roman';line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="line-height:115%;" lang="TR" dir="ltr">Kendime zarar verme düşüncelerim hâlâ devam ediyorsa aşağıda belirtilen mekânlardan birine gitmeyi kabul ediyorum. (If I still have thoughts of harming myself, I agree to go to one of the places listed below.)</span></span>
-</p>
-<p class="MsoListParagraphCxSpMiddle" style="margin-left:.75in;mso-add-space:auto;mso-list:l1 level1 lfo3;text-align:justify;text-indent:-.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">a.</span><span style="font:7.0pt 'Times New Roman';line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="line-height:115%;" lang="TR" dir="ltr">Evinin yakınlarında bir yer (Somewhere near your house):</span></span>
-</p>
-<p class="MsoListParagraphCxSpMiddle" style="margin-left:.75in;mso-add-space:auto;mso-list:l1 level1 lfo3;text-align:justify;text-indent:-.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">b.</span><span style="font:7.0pt 'Times New Roman';line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="line-height:115%;" lang="TR" dir="ltr">İşinin veya okulunun yakınlarında bir yer (Somewhere near your work or school):</span></span>
-</p>
-<p class="MsoListParagraphCxSpMiddle" style="margin-left:.75in;mso-add-space:auto;mso-list:l1 level1 lfo3;text-align:justify;text-indent:-.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">c.</span><span style="font:7.0pt 'Times New Roman';line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="line-height:115%;" lang="TR" dir="ltr">Sevdiği bir yer (A favorite place):</span></span>
-</p>
-<p class="MsoListParagraphCxSpLast" style="margin-left:40px;mso-list:l0 level1 lfo1;text-align:justify;text-indent:-.25in;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">3.</span><span style="font:7.0pt 'Times New Roman';line-height:115%;mso-fareast-font-family:'Times New Roman';mso-list:Ignore;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="line-height:115%;" lang="TR" dir="ltr">Kendime zarar verme düşüncelerim hâlâ devam ediyorsa bulunduğum yere en yakın hastanenin Acil Servisine gitmeyi kabul ediyorum. (If I still have thoughts of harming myself, I agree to go to the Emergency Service of the nearest hospital.)</span></span>
-</p>
-<p class="MsoNormal" style="text-align:justify;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;" lang="TR" dir="ltr">Danışanın Adı Soyadı (Client's Name and Surname):</span><span style="line-height:115%;mso-spacerun:yes;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
-</p>
-<p class="MsoNormal" style="text-align:justify;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;" lang="TR" dir="ltr">İmza (Signature):</span></span>
-</p>
-<p class="MsoNormal" style="text-align:justify;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;" lang="TR" dir="ltr">&nbsp;</span></span>
-</p>
-<p class="MsoNormal" style="text-align:justify;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;" lang="TR" dir="ltr">Terapistin Adı Soyadı (Therapist's Name and Surname):</span></span>
-</p>
-<p class="MsoNormal" style="text-align:justify;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;" lang="TR" dir="ltr">İmza (Signature):</span><span style="line-height:115%;mso-spacerun:yes;" lang="TR" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span></span>
-</p>
-<p class="MsoNormal" style="text-align:justify;">
-    <span style="font-family:'Times New Roman',serif;font-size:12.0pt;"><span style="line-height:115%;" lang="TR" dir="ltr">&nbsp;</span></span>
-</p>
-END]),
+                "name" => "account_name",
+                "title" => "Hesap Adı",
+                "desc" => "",
+                "value" => json_encode("Saliha Nur Can"),
                 "options" => json_encode([]),
-                "element" => "list",
-                "category" => "Randevu",
+                "element" => "input:text",
+                "category" => "Ödeme",
             ],
             [
                 "name" => "iban_no",
@@ -225,6 +163,42 @@ END]),
                 "category" => "Ödeme",
             ],
             [
+                "name" => "feedback_duration",
+                "title" => "Geri Bildirim Süresi",
+                "desc" => "Randevu sonrasında katılımcı geri bildirim e-postası aldıktan sonra, belirtilen süre içinde yorum yapması beklenir.",
+                "value" => json_encode("10"),
+                "options" => json_encode("gün"),
+                "element" => "input:text",
+                "category" => "Geri Bildirim",
+            ],
+            [
+                "name" => "feedback_max_score",
+                "title" => "Geri Bildirim Puanı",
+                "desc" => "Katılımcı belirtilen puan üzerinden değerlendirme yapar.",
+                "value" => json_encode("5"),
+                "options" => json_encode([]),
+                "element" => "input:text",
+                "category" => "Geri Bildirim",
+            ],
+            [
+                "name" => "feedback_text_length",
+                "title" => "Geri Bildirim Metni",
+                "desc" => "Katılımcı belirtilen uzunlukta metin yazabilir.",
+                "value" => json_encode("300"),
+                "options" => json_encode('harf'),
+                "element" => "input:text",
+                "category" => "Geri Bildirim",
+            ],
+            [
+                "name" => "feedback_number",
+                "title" => "Geri Bildirim Sayısı",
+                "desc" => "Sitede gösterilecek geri bildirim sayısı(En az 5, en fazla 30).",
+                "value" => json_encode("30"),
+                "options" => json_encode('adet'),
+                "element" => "input:text",
+                "category" => "Geri Bildirim",
+            ],
+            [
                 "name" => "contact_email",
                 "title" => "İletişim E-Posta Adresi",
                 "desc" => "Randevu alındıktan sonra gönderilen e-posta içerisinde yer alan iletişim adresi.",
@@ -232,6 +206,34 @@ END]),
                 "options" => json_encode([]),
                 "element" => "input:text",
                 "category" => "Site",
+            ],
+
+            [
+                "name" => "suicide_contract",
+                "title" => "İntihar Sözleşmesi",
+                "desc" => "",
+                "value" => json_encode(""),
+                "options" => json_encode([]),
+                "element" => "list",
+                "category" => "Sözleşmeler",
+            ],
+            [
+                "name" => "user_agreement",
+                "title" => "Kullanıcı Sözleşmesi",
+                "desc" => "",
+                "value" => json_encode(""),
+                "options" => json_encode([]),
+                "element" => "list",
+                "category" => "Sözleşmeler",
+            ],
+            [
+                "name" => "kvkk",
+                "title" => "Aydınlatma Metni",
+                "desc" => "",
+                "value" => json_encode(""),
+                "options" => json_encode([]),
+                "element" => "list",
+                "category" => "Sözleşmeler",
             ]
         ];
 

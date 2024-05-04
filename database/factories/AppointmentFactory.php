@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\AppointmentStatus;
+use App\Models\PaymentStatus;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Appointment>
@@ -51,8 +52,8 @@ class AppointmentFactory extends Factory
 
         $faker = \Faker\Factory::create('tr_TR');
 
-        $startDate = '2024-03-01';
-        $endDate = '2024-05-20';
+        $startDate = '2024-04-01';
+        $endDate = '2024-06-20';
 
         $startTime = '09:00';
         $endTime = '15:00';
@@ -93,6 +94,8 @@ class AppointmentFactory extends Factory
 
         $uniqueIndex = $faker->unique()->numberBetween(0, 280);
         $statusId = AppointmentStatus::inRandomOrder()->pluck('id')->first();
+        $payment = PaymentStatus::inRandomOrder()->pluck('id')->first();
+
         return [
             'date' => $dataArray[$uniqueIndex]['date'],
             'time' => $dataArray[$uniqueIndex]['time'],
@@ -100,7 +103,8 @@ class AppointmentFactory extends Factory
             'diagnosis' => $faker->text(100),
             'notes' => $faker->text(350),
             'verifyCode' => $this->generateRandomCode(),
-            'appointment_status_id' => $statusId
+            'appointment_status_id' => $statusId,
+            'payment_status_id' => $payment
         ];
     }
 }

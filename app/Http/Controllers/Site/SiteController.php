@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 
 
@@ -11,11 +12,13 @@ use App\Models\AppointmentStatus;
 use App\Models\Setting;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Validation\Rule;
 use App\Mail\DetailsMail;
+use App\Models\Feedback;
+use App\Models\PaymentStatus;
 use DateTime;
 use DateTimeZone;
 use Exception;
-use stdClass;
 use Closure;
 
 class SiteController extends Controller
@@ -41,7 +44,7 @@ class SiteController extends Controller
             return $formattedData;
         }
 
-        $allowedStatus = ['pending_payment', 'approved', 'rescheduled'];
+        $allowedStatus = ['pending', 'approved', 'rescheduled'];
 
         $today = Carbon::now()->toDateString();
         $appointment = Appointment::with('status')->whereDate('date', ">=", $today)->get()->toArray();
@@ -54,34 +57,23 @@ class SiteController extends Controller
 
     public function manageAppointment (Request $request) {
         $settings = Setting::getFormattedSettings();
-        $timeZone = $settings['timezone'];
-        $limit = $settings['edit_duration'];
-        function isItEditable($dateTime, $limit, $timeZone)
-        {
-            $dateTime = new DateTime($dateTime, new DateTimeZone($timeZone));
-            $today = new DateTime('now', new DateTimeZone($timeZone));
-            if ($dateTime < $today) {
-                return 'pastDay';
-            }
-            $interval = $dateTime->diff($today);
-            $hours = $interval->h + $interval->days * 24;
-            return $hours > $limit;
-        }
+        $timezone = $settings['timezone'];
+        $limit = $settings['edit_limit'];
 
         $request->validate([
             "email" => "required|email",
             "verifyCode" => "required|min:6|max:6"
         ]);
-        $appointment = Appointment::where("email", $request->email)->where("verifyCode", $request->verifyCode)->with('status')->get()->toArray();
-        $notFoundList = ['feedback_pending', 'cancelled', 'completed'];
-        if (count($appointment)) {
-            $status = $appointment[0]["status"]['name'];
-            if (in_array($status, $notFoundList)) {
-                return response()->json("not_found");
-            }
-            if ($status === 'awaiting_refund') {
+        try {
+            $appointment = Appointment::where("email", $request->email)->where("verifyCode", $request->verifyCode)->with('status')->with('payment_status')->first();
+            $canEditList = ['pending', 'approved', 'rescheduled'];
+        if ($appointment) {
+            $status = $appointment->status->name;
+            $payment_status = $appointment->payment_status->name;
+
+            if ($payment_status === 'awaiting_refund') {
                 return response()->json([
-                    "name" => $status,
+                    "name" => $payment_status,
                     "message" => "Geri ödeme talebiniz bize ulaştı. İşlemleriniz en kısa sürede yapılacaktır."
                 ]);
             }
@@ -91,32 +83,41 @@ class SiteController extends Controller
                     "message" => "Belirtilen tarih ve saatte randevuya katılım yapılmadığı için randevunuz iptal edilmiştir."
                 ]);
             }
-            if ($status === 'no_payment') {
+            if ($payment_status === 'no_payment') {
                 return response()->json([
-                    "name" => $status,
+                    "name" => $payment_status,
                     "message" => "Belirtilen süre içerisinde ödeme yapılmadığı için randevunuz iptal edildi."
                 ]);
             }
-            $date = $appointment[0]['date'];
-            $time = $appointment[0]['time'];
-            if (isItEditable($date . " " . $time . ":00", $limit, $timeZone) === 'pastDay') {
+            if (!in_array($status, $canEditList)) {
                 return response()->json("not_found");
-            } else if (isItEditable($date . " " . $time . ":00", $limit, $timeZone) === true) {
-                $fields = ["id", "name", "surname", "email", "verifyCode", "phone", "gender", "age", "date", "time", 'status'];
-                $responseFields = collect($appointment[0])->only($fields)->toArray();
-                $responseFields['status'] = [
-                    "name" => $responseFields['status']['name'],
-                    "text" => $responseFields['status']['text']
-                ];
-                $responseFields['timezone'] = $timeZone;
-                return response()->json($responseFields);
-            } else {
-                return response()->json([
-                    "message" => "Özür dileriz, ancak randevu şartları çerçevesinde, randevu saatine " . $limit . " saat kala herhangi bir değişiklik yapılamamaktadır."
-                ]);
             }
+
+            $date = $appointment->date;
+            $time = $appointment->time;
+            $dateTime = $date . " " . $time . ":00";
+            $canEdit = isItEditable($dateTime, $limit, $timezone['name']);
+
+            $fields = ["id", "name", "surname", "email", "verifyCode", "phone", "gender", "age", "date", "time", 'status', 'payment_status'];
+            $responseFields = collect($appointment)->only($fields)->toArray();
+            $responseFields['status'] = [
+                "name" => $responseFields['status']['name'],
+                "text" => $responseFields['status']['text']
+            ];
+            $responseFields['payment_status'] = [
+                "name" => $responseFields['payment_status']['name'],
+                "text" => $responseFields['payment_status']['text']
+            ];
+            $responseFields['edit_limit'] = $limit;
+            $responseFields['timezone'] = $timezone['text'];
+            $responseFields['canEdit'] = $canEdit;
+            return response()->json($responseFields);
+
         } else {
             return response()->json("not_found");
+        }
+        } catch (\Throwable $th) {
+            return response()->json("error");
         }
     }
 
@@ -252,22 +253,149 @@ class SiteController extends Controller
                 "site_url" => config("app.frontend_url")
             ];
             Mail::to($appointment->email)->send(new DetailsMail($fields));
-        } catch (Exception $e) {
             return response()->json([
-                "message" => "bir sorun olustu => {$e}"
-            ], 404);
+                "email" => $appointment->email,
+                "date" => $appointment->date,
+                "price" => $priceText,
+                "time" => $appointment->time,
+                "verifyCode" => $appointment->verifyCode
+            ]);
+        } catch (Exception $e) {
+            return response()->json('error');
         }
-        return response()->json([
-            "email" => $appointment->email,
-            "date" => $appointment->date,
-            "price" => $priceText,
-            "time" => $appointment->time,
-            "verifyCode" => $appointment->verifyCode
-        ]);
+
     }
 
     public function cancelAppointment(Request $request) {
+        $request->validate([
+            "email" => "required|email",
+            "verifyCode" => "required|min:6|max:6"
+        ]);
+        try {
+            $approvedStatus = PaymentStatus::select('id')->where('name', 'approved')->first();
+            $appointment = Appointment::where("email", $request->email)->where("verifyCode", $request->verifyCode)->with('status')->with('payment_status')->first();
+            if($approvedStatus->id == $appointment->payment_status_id){
 
-        return response()->json($request->all());
+                $settings = Setting::getFormattedSettings();
+                $dateTime = $appointment->date . " " . $appointment->time . ":00";
+                $isRefundable = isItEditable($dateTime, $settings['edit_limit'], $settings['timezone']['name']);
+                if($isRefundable){
+                    $refundStatus = PaymentStatus::select('id')->where('name', 'awaiting_refund')->first();
+                    $cancelledStatus = AppointmentStatus::select('id')->where('name', 'cancelled')->first();
+                    $appointment->appointment_status_id = $cancelledStatus->id;
+                    $appointment->payment_status_id = $refundStatus->id;
+                    $appointment->save();
+                    return response()->json('ok');
+                }else {
+                    $cancelledStatus = AppointmentStatus::select('id')->where('name', 'cancelled')->first();
+                    $appointment->appointment_status_id = $cancelledStatus->id;
+                    $appointment->save();
+                    return response()->json('ok');
+                }
+            }else {
+                $cancelledStatus = AppointmentStatus::select('id')->where('name', 'cancelled')->first();
+                $appointment->appointment_status_id = $cancelledStatus->id;
+                $appointment->save();
+                return response()->json('ok');
+            }
+        } catch (\Throwable $th) {
+            return response()->json('error'. $th);
+        }
+    }
+
+    public function contactForm(Request $request) {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'message' => 'required|string'
+        ]);
+        try {
+            $contactMail = Setting::select('value')->where('name', 'contact_email')->first();
+            Mail::to($contactMail->value)->send(new ContactMail($request->all()));
+            return response()->json('ok');
+        } catch (Exception $e) {
+            return response()->json('error');
+        }
+    }
+
+    public function getTerms(Request $request) {
+        $request->validate([
+            'id' => 'required|string'
+        ]);
+
+        $fieldName = '';
+        if($request->id === 'kvkk'){
+            $fieldName = 'kvkk';
+        }
+        if($request->id === 'kullanici-sozlesmesi'){
+            $fieldName = 'user_agreement';
+        }
+        if($request->id === 'intihar-sozlesmesi'){
+            $fieldName = 'suicide_contract';
+        }
+
+        try {
+            $terms = Setting::where('name', $fieldName)->first();
+            if($terms){
+                return response()->json($terms['value']);
+            }else {
+                return response()->json('error1');
+            }
+
+        } catch (\Throwable $th) {
+            return response()->json('error2');
+        }
+    }
+
+    public function checkFeedback(Request $request) {
+        $request->validate([
+            'id' => 'required|string'
+        ]);
+        try {
+            $feedback = Feedback::where('uuid', $request->id)->first();
+            if($feedback){
+                $fields = ['feedback_max_score', 'feedback_text_length'];
+                $settings = Setting::select('name', 'value')->whereIn('name', $fields)->get();
+                return response()->json($settings);
+            }else {
+                return response()->json('not_found');
+            }
+        } catch (\Throwable $th) {
+            return response()->json('error');
+        }
+    }
+
+    public function getFeedbacks() {
+        $feedbacks = Feedback::with('appointment')->offset(10)
+        ->limit(30)
+        ->get();//where isActive true
+        $fields = [];
+        foreach ($feedbacks as $feedback) {
+            $surname = $feedback["appointment"]["surname"];
+            $surname = mb_substr($surname, 0, 1);
+            $name = $feedback["is_anonymous"] ? false : $feedback["appointment"]["name"] . " " . $surname . ".";
+            $fields[] = [
+                "score" => $feedback["score"],
+                "comment" => $feedback["comment"],
+                "name" => $name,
+
+            ];
+        }
+        return response()->json($fields);
+    }
+
+    public function storeFeedback(Request $request) {
+        try {
+            $settings  = Setting::getFormattedSettings();
+            $request->validate([
+                'score' => ['required', 'min:1', Rule::max($settings['feedback_max_score'])],
+                'comment' => ['required', 'min:3', Rule::max($settings['feedback_text_length'])],
+                'is_anonymous' => "required|boolean"
+            ]);
+
+        } catch (\Throwable $th) {
+           return response()->json('error');
+        }
+
     }
 }

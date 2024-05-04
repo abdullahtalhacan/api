@@ -13,9 +13,10 @@ return new class extends Migration {
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid');
-            $table->integer('score');
-            $table->text('comment');
-            $table->boolean('is_anonymous')->default(false);
+            $table->integer('score')->nullable();
+            $table->text('comment')->nullable();
+            $table->boolean('is_anonymous')->nullable();
+            $table->boolean('isActive')->default(false);
             $table->timestamps();
         });
     }

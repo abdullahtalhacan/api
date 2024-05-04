@@ -30,4 +30,9 @@ class Appointment extends Model
     {
         return $this->belongsTo(AppointmentStatus::class, 'appointment_status_id');
     }
+
+    public function payment_status()
+    {
+        return $this->belongsTo(PaymentStatus::class, 'payment_status_id');
+    }
 }

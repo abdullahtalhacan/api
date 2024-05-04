@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Feedback extends Model
 {
     use HasFactory;
-    protected $fillable = ['uuid', 'score', 'comment', 'hide_name'];
+    protected $fillable = ['uuid', 'score', 'comment', 'is_anonymous'];
 
     public function appointment()
     {
